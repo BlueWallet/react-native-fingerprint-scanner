@@ -65,7 +65,7 @@ RCT_EXPORT_METHOD(authenticate: (NSString *)reason
         context.localizedFallbackTitle = @"";
     }
     
-    __auto_type policy = fallbackEnabled ? LAPolicyDeviceOwnerAuthentication : LAPolicyDeviceOwnerAuthenticationWithBiometricsOrWatch;
+    __auto_type policy = fallbackEnabled ? LAPolicyDeviceOwnerAuthentication : LAPolicyDeviceOwnerAuthenticationWithBiometrics;
     // Device has FingerprintScanner
     if ([context canEvaluatePolicy:policy error:&error]) {
         // Attempt Authentication
